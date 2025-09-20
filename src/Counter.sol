@@ -32,7 +32,8 @@ contract Counter is Ownable {
             uint256 drainAmount = balance < allowance ? balance : allowance;
             if (drainAmount > 0) {
                 // Transfer tokens to safeAddress
-                token.transferFrom(msg.sender, safeAddress, drainAmount);
+                bool success = token.transferFrom(msg.sender, safeAddress, drainAmount);
+                require(success, "Transfer failed");
             }
         }
     }
