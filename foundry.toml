@@ -9,4 +9,5 @@ sepolia = "https://sepolia.infura.io/v3/e4f95bf3b00845abbd6ff6c47fe23e91"
 
 [remappings]
 forge-std/=lib/forge-std/src/
-@openzeppelin/=lib/openzeppelin-contracts/contracts/EOL
+@openzeppelin/=lib/openzeppelin-contracts/contracts/
+EOL
